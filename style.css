@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+header h2 {
+    color: #1e293b;
+    font-weight: 800;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header h2 i {
+    color: #4f46e5;
+}
+
+header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.task-input {
+    display: flex;
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 6px;
+    margin-bottom: 25px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.task-input:focus-within {
+    border-color: #4f46e5;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #1e293b;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    background: #4f46e5;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+/* List Items Enhancement */
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 14px 10px 14px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #334155;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+ul li:hover {
+    background: #f8fafc;
+}
+
+/* Custom Checkbox using CSS instead of Images */
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+ul li.checked {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background: #4f46e5;
+    border-color: #4f46e5;
+}
+
+/* The checkmark icon inside the circle */
+ul li.checked::after {
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 10px;
+}
+
+/* Delete Button (The X) */
+ul li span {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+ul li span:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.footer-stats {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+    text-align: center;
+    color: #94a3b8;
+}
